@@ -1,5 +1,5 @@
 # Python_learningGB
-Commands:
+Commands:  
 Create IDE for programming with python -->
 ```Bash
 python3 -m venv .folder
