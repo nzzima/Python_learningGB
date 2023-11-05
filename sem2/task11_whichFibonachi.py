@@ -22,6 +22,6 @@ for i in range(1, 2 * A):
         break
     
 if check == True:
-    print(f"\nResult: {A} on place {index}")
+    print(f"\nResult: {A} on the place {index}")
 else:
     print("\nResult: ",-1)
