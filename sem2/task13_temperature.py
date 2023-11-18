@@ -7,9 +7,9 @@ checkpoint_list = []
 
 def rnd_day_list(n):
     for i in range(1, n):
-        days.append(random.randint(-50, 50))
+        days.append(random.randint(-10, 51))
     
-def create_check_list(days, n):
+def create_check_list(days):
     checking_point = 0
     for day in days:
         if day > 0:
@@ -29,7 +29,7 @@ def find_max(data):
     return max
 
 rnd_day_list(N)
-create_check_list(days, N)
+create_check_list(days)
 print(days)
 print(checkpoint_list)
 max_elem = find_max(checkpoint_list)
