@@ -8,8 +8,8 @@ intermediate_seq = []
 cont_increasing_seq = []
 
 def create_random_list(len):
-    for i in range (1, len):
-        numbers.append(random.randint(1, 10))
+    for i in range (1, len + 1):
+        numbers.append(random.randint(-5, 15))
         
 def is_number_in_list(element, nums):
     if element in nums:
@@ -30,7 +30,7 @@ def choose_increasing_sequence(sequence, final_sequence):
     elif len(sequence) == 1:
         sequence.clear()
     else:
-        print(sequence)
+        print(f"Found sequence --> {sequence}")
         if len(final_sequence) == 0:
             final_sequence.append(sequence[0])
             final_sequence.append(sequence[-1])
@@ -46,6 +46,6 @@ def choose_increasing_sequence(sequence, final_sequence):
         sequence.clear()
 
 create_random_list(length)
-print("Enter start list: ", numbers)
+print("Enter start list: ", numbers, "\n|==================================|")
 find_increasing_sequence(numbers)
-print("Final sequence = ", cont_increasing_seq)
+print("|==================================|", "\nFinal sequence = ", cont_increasing_seq)
