@@ -18,7 +18,7 @@ def create_polinom(degree):
     for coeff in coefficients:
         if coeff != 0:
             if coeff > 0 and temp == degree:
-                polinom += f"{coeff}*x^{degree} "
+                polinom += f" {coeff}*x^{degree} "
             elif coeff > 0 and temp != degree:
                 polinom += f"+ {coeff}*x^{degree} "
             else:
@@ -27,8 +27,9 @@ def create_polinom(degree):
         elif coeff == 0:
             degree -= 1
             continue
-    polinom = polinom.replace('x^1', 'x')
+    polinom = polinom.replace('x^1 ', 'x')
     polinom = polinom.replace('*x^0', '')
+    polinom = polinom.replace('1*', '')
     polinom += "= 0"
     return polinom
         
