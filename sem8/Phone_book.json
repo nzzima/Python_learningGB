@@ -1,0 +1,21 @@
+{
+    "Nick": {
+        "phones": [
+            "46346282"
+        ],
+        "birthday": "06.07.1999",
+        "email": "4343@ya.ru"
+    },
+    "George": {
+        "phones": [
+            "4838472245"
+        ]
+    },
+    "Helen": {
+        "phones": [
+            "4838472672"
+        ],
+        "birthday": "09.11.2001",
+        "email": "47365553hel@gmail.com"
+    }
+}
