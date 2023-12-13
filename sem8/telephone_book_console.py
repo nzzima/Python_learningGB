@@ -7,6 +7,14 @@
 import json
 
 telephone_book = {}
+print("\nWelcome to PHONE_BOOK console application!\n"
+            "Commands:\n"
+            "- Add (add new person to telephone_book)\n"
+            "- Save (save new info from telephone_book to output json file)\n"
+            "- Show (printing telephone_book info to console)\n"
+            "- Search (find some info about person in telephone_book)\n"
+            "- Delete (remove rather some info about person, rather full info about someone) (Combined Delete + Save)\n"
+            "- Change (change some info about person)")
 
 while True:
     command = input("Enter command: ")
@@ -36,12 +44,12 @@ while True:
             print()
     
     elif command == "Save":
-        with open("Phone_book.json", "w", encoding="utf-8") as file:
-            json.dump(telephone_book, file)
+        with open("Python_learningGB/Phone_book.json", "w", encoding="utf-8") as outfile:
+            json.dump(telephone_book, outfile, indent=4)
         print("SUCCESS SAVE\n")
     
     elif command == "Take":
-        with open("Phone_book.json", "r", encoding="utf-8") as file:
+        with open("Python_learningGB/Phone_book.json", "r", encoding="utf-8") as file:
             info_json = file.read()
             telephone_book = json.loads(info_json)
             # print("Took dict: ", telephone_book)
@@ -64,6 +72,15 @@ while True:
         user_name = input("Enter name --> ")
         if user_name in telephone_book:
             print("What you would like to change?\n[phones, email, birthday]")
+            user_would_like = input("Enter --> ")
+            
+            try:
+                user_input = input(f"Enter new {user_would_like}: ")
+                telephone_book[user_name][user_would_like] = user_input
+                print(f"SUCCESS CAHNGED {user_name}'s {user_would_like}\n")
+                
+            except KeyError:
+                print(f"Can't change {user_name}'s {user_would_like} because it's not exist !\n")
         
         else:
             print("No such person in telephone book !\n")
@@ -71,11 +88,45 @@ while True:
     elif command == "Delete":
         user_name = input("Enter name --> ")
         if user_name in telephone_book:
-            print("What you would like to delete?\n[phones, email, birthday]")
-        
+            print("What you would like to delete?\n[phones, email, birthday, full]")
+            user_would_like = input("Enter --> ")
+            try:
+                if user_would_like != "full":
+                    del telephone_book[user_name][user_would_like]
+                    
+                    with open("Python_learningGB/Phone_book.json", "r", encoding="utf-8") as file:
+                        info_file = file.read()
+                        info_json = json.loads(info_file)
+                        
+                    for element in info_json[user_name]:
+                        if element == user_would_like:
+                            info_json[user_name].pop(element)
+                            break
+                                        
+                    with open("Python_learningGB/Phone_book.json", "w", encoding="utf-8") as outfile:
+                        json.dump(info_json, outfile, indent=4)
+                    print(f"SUCCESS DELETED {user_name}'s {user_would_like}\n")
+                        
+                elif user_would_like == "full":
+                    del telephone_book[user_name]
+                    
+                    with open("Python_learningGB/Phone_book.json", "r", encoding="utf-8") as file:
+                        info_file = file.read()
+                        info_json = json.loads(info_file)
+                        
+                    del info_json[user_name]
+                                        
+                    with open("Python_learningGB/Phone_book.json", "w", encoding="utf-8") as outfile:
+                        json.dump(info_json, outfile, indent=4)
+                    print(f"SUCCESS DELETED {user_name}'s FULL INFO\n")
+                    
+            except KeyError:
+                print(f"Can't delete {user_name}'s {user_would_like} because it's not exist !\n")
         else:
             print("No such person in telephone book !\n")
 
     elif command == "Exit":
         exit()
         
+    else:
+        print("This command is not existing. Try again.")

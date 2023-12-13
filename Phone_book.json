@@ -1,1 +1,16 @@
-{"Nick": {"phones": ["8973626521"], "birthday": "09.08.1980", "email": "382826@ya.ru"}, "Fina": {"phones": ["8772171921"]}, "Yan": {"phones": ["83928276123"], "birthday": "07.01.1999", "email": "yayat623@ya.ru"}, "George": {"phones": ["7382929811"]}, "Kira": {"phones": ["828327161"], "birthday": "09.11.2002", "email": "47382gf@gmail.com"}}
+{
+    "Nick": {
+        "phones": [
+            "8973626521"
+        ],
+        "birthday": "09.08.1980",
+        "email": "nickkrylov@gmail.com"
+    },
+    "Helen": {
+        "phones": [
+            "329327327"
+        ],
+        "birthday": "09.08.1999",
+        "email": "32928yds@ya.ru"
+    }
+}
