@@ -44,12 +44,12 @@ while True:
             print()
     
     elif command == "Save":
-        with open("Python_learningGB/sem8/Phone_book.json", "w", encoding="utf-8") as outfile:
+        with open("C:/Users/nzzima/Desktop/Python_learningGB/sem8/Phone_book.json", "w", encoding="utf-8") as outfile:
             json.dump(telephone_book, outfile, indent=4)
         print("SUCCESS SAVE\n")
     
     elif command == "Take":
-        with open("Python_learningGB/sem8/Phone_book.json", "r", encoding="utf-8") as file:
+        with open("C:/Users/nzzima/Desktop/Python_learningGB/sem8/Phone_book.json", "r", encoding="utf-8") as file:
             info_json = file.read()
             telephone_book = json.loads(info_json)
             # print("Took dict: ", telephone_book)
@@ -94,7 +94,7 @@ while True:
                 if user_would_like != "full":
                     del telephone_book[user_name][user_would_like]
                     
-                    with open("Python_learningGB/sem8/Phone_book.json", "r", encoding="utf-8") as file:
+                    with open("C:/Users/nzzima/Desktop/Python_learningGB/sem8/Phone_book.json", "r", encoding="utf-8") as file:
                         info_file = file.read()
                         info_json = json.loads(info_file)
                         
@@ -103,20 +103,20 @@ while True:
                             info_json[user_name].pop(element)
                             break
                                         
-                    with open("Python_learningGB/Phone_book.json", "w", encoding="utf-8") as outfile:
+                    with open("C:/Users/nzzima/Desktop/Python_learningGB/sem8/Phone_book.json", "w", encoding="utf-8") as outfile:
                         json.dump(info_json, outfile, indent=4)
                     print(f"SUCCESS DELETED {user_name}'s {user_would_like}\n")
                         
                 elif user_would_like == "full":
                     del telephone_book[user_name]
                     
-                    with open("Python_learningGB/sem8/Phone_book.json", "r", encoding="utf-8") as file:
+                    with open("C:/Users/nzzima/Desktop/Python_learningGB/sem8/Phone_book.json", "r", encoding="utf-8") as file:
                         info_file = file.read()
                         info_json = json.loads(info_file)
                         
                     del info_json[user_name]
                                         
-                    with open("Python_learningGB/sem8/Phone_book.json", "w", encoding="utf-8") as outfile:
+                    with open("C:/Users/nzzima/Desktop/Python_learningGB/sem8/Phone_book.json", "w", encoding="utf-8") as outfile:
                         json.dump(info_json, outfile, indent=4)
                     print(f"SUCCESS DELETED {user_name}'s FULL INFO\n")
                     
