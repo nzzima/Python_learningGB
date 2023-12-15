@@ -7,8 +7,13 @@
     <x>0</x>
     <y>0</y>
     <width>800</width>
-    <height>600</height>
+    <height>800</height>
    </rect>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>11</pointsize>
+   </font>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
@@ -102,8 +107,8 @@ border-radius: 15px;</string>
   <widget class="QPushButton" name="change_button">
    <property name="geometry">
     <rect>
-     <x>310</x>
-     <y>530</y>
+     <x>30</x>
+     <y>650</y>
      <width>121</width>
      <height>51</height>
     </rect>
@@ -126,8 +131,8 @@ border-radius: 15px;</string>
   <widget class="QPushButton" name="search_button">
    <property name="geometry">
     <rect>
-     <x>170</x>
-     <y>530</y>
+     <x>30</x>
+     <y>590</y>
      <width>121</width>
      <height>51</height>
     </rect>
@@ -150,8 +155,8 @@ border-radius: 15px;</string>
   <widget class="QPushButton" name="delete_button">
    <property name="geometry">
     <rect>
-     <x>450</x>
-     <y>530</y>
+     <x>30</x>
+     <y>710</y>
      <width>121</width>
      <height>51</height>
     </rect>
@@ -174,10 +179,10 @@ border-radius: 15px;</string>
   <widget class="QPushButton" name="exit_button">
    <property name="geometry">
     <rect>
-     <x>650</x>
-     <y>530</y>
-     <width>121</width>
-     <height>51</height>
+     <x>720</x>
+     <y>750</y>
+     <width>71</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="font">
@@ -217,6 +222,390 @@ border-radius: 15px;</string>
    </property>
    <property name="text">
     <string>EXPLORE</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="refresh_button">
+   <property name="geometry">
+    <rect>
+     <x>650</x>
+     <y>70</y>
+     <width>121</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Bahnschrift Condensed</family>
+     <pointsize>23</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 0, 255);
+border-radius: 15px;</string>
+   </property>
+   <property name="text">
+    <string>REFRESH</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="id">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>540</y>
+     <width>61</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="placeholderText">
+    <string>id</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="name">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>540</y>
+     <width>81</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="placeholderText">
+    <string>name</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="surname">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>540</y>
+     <width>81</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="placeholderText">
+    <string>surname</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="phone">
+   <property name="geometry">
+    <rect>
+     <x>410</x>
+     <y>540</y>
+     <width>101</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="placeholderText">
+    <string>phone</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="about">
+   <property name="geometry">
+    <rect>
+     <x>520</x>
+     <y>540</y>
+     <width>141</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="placeholderText">
+    <string>Info about person</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="confirm_add_button">
+   <property name="geometry">
+    <rect>
+     <x>680</x>
+     <y>540</y>
+     <width>101</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Bahnschrift Condensed</family>
+     <pointsize>16</pointsize>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 0, 255);
+border-radius: 15px;</string>
+   </property>
+   <property name="text">
+    <string>CONFIRM</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="search_tag">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>600</y>
+     <width>151</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="placeholderText">
+    <string>Search mark</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="search_info">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>600</y>
+     <width>151</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="placeholderText">
+    <string>Search info</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="confirm_search_button">
+   <property name="geometry">
+    <rect>
+     <x>490</x>
+     <y>600</y>
+     <width>101</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Bahnschrift Condensed</family>
+     <pointsize>16</pointsize>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 0, 255);
+border-radius: 15px;</string>
+   </property>
+   <property name="text">
+    <string>CONFIRM</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="delete_tag">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>720</y>
+     <width>151</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="placeholderText">
+    <string>Delete mark</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="delete_info">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>720</y>
+     <width>151</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="placeholderText">
+    <string>Delete info</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="confirm_delete_button">
+   <property name="geometry">
+    <rect>
+     <x>490</x>
+     <y>720</y>
+     <width>101</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Bahnschrift Condensed</family>
+     <pointsize>16</pointsize>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 0, 255);
+border-radius: 15px;</string>
+   </property>
+   <property name="text">
+    <string>CONFIRM</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="change_tag">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>660</y>
+     <width>151</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="placeholderText">
+    <string>Change mark</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="change_info">
+   <property name="geometry">
+    <rect>
+     <x>480</x>
+     <y>660</y>
+     <width>151</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="placeholderText">
+    <string>Change info</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="confirm_change_button">
+   <property name="geometry">
+    <rect>
+     <x>650</x>
+     <y>660</y>
+     <width>101</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Bahnschrift Condensed</family>
+     <pointsize>16</pointsize>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 0, 255);
+border-radius: 15px;</string>
+   </property>
+   <property name="text">
+    <string>CONFIRM</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="change_id_person">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>660</y>
+     <width>151</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="placeholderText">
+    <string>id</string>
    </property>
   </widget>
  </widget>
